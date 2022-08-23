@@ -2,13 +2,14 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 
 export const GlobalStyle = createGlobalStyle`
+  
+  
   body{
-    background-color: #FFA07A;
+    margin-top: 150px;
   }
   `;
 
 export const Container = styled.div`
-    background-color: #D3D3D3;
     width: 100%;
     max-width: 1200px;
     margin: auto;
@@ -24,6 +25,11 @@ export const Info = styled.div`
     display: flex;
     flex-direction: column;
     width: auto;
+
+    @media(max-width: 750px){
+        align-items: center;
+        margin-bottom: 50px;
+    }
 `;
 
 export const LogoLink = styled.a`
@@ -42,10 +48,9 @@ export const InfoArea = styled.div`
 `;
 
 export const GridArea = styled.div`
-    background-color: #BDB76B;
     display: flex;
     flex: 1;
-    justify-content: flex-end;
+    justify-content: center;
 
     @media(max-width:750px){
         justify-content: center;
@@ -54,9 +59,8 @@ export const GridArea = styled.div`
 `;
 
 export const Grid = styled.div`
-    background-color: red;
-    width: 430px;
     display: grid;
+    width: 500px;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 `;
